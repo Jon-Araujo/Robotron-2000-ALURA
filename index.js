@@ -70,16 +70,29 @@ botaoProducao.addEventListener('click', () => {
         valorEstatisticas.push(parseInt(estatisticas[i].outerText));
     };
 
-    const totalForca = [];
-    const valorBraco = pecas.bracos;
-    const valorBlindagem = pecas.blindagem;
-    const valorNucleo = pecas.nucleos;
-    const valorPerna = pecas.pernas;
-    const valorFoguete = pecas.foguetes;
+    const totalValor = [];
 
-    for (let i = 0; i < valorEstatisticas.length; i++) {
-        totalForca.push(valorEstatisticas[0] + parseInt(valorBraco.forca) + parseInt(valorBlindagem.forca) +
-            parseInt(valorNucleo.forca) + parseInt(valorPerna.forca) + parseInt(valorFoguete.forca))
+    totalValor.push(valorEstatisticas[0] + parseInt(pecas.bracos.forca)
+        + parseInt(pecas.blindagem.forca) + parseInt(pecas.nucleos.forca)
+        + parseInt(pecas.pernas.forca) + parseInt(pecas.foguetes.forca))
+
+
+    totalValor.push(valorEstatisticas[1] + parseInt(pecas.bracos.poder)
+        + parseInt(pecas.blindagem.poder) + parseInt(pecas.nucleos.poder)
+        + parseInt(pecas.pernas.poder) + parseInt(pecas.foguetes.poder))
+
+
+    totalValor.push(valorEstatisticas[2] + parseInt(pecas.bracos.energia)
+        + parseInt(pecas.blindagem.energia) + parseInt(pecas.nucleos.energia)
+        + parseInt(pecas.pernas.energia) + parseInt(pecas.foguetes.energia))
+
+
+    totalValor.push(valorEstatisticas[3] + parseInt(pecas.bracos.velocidade)
+        + parseInt(pecas.blindagem.velocidade) + parseInt(pecas.nucleos.velocidade)
+        + parseInt(pecas.pernas.velocidade) + parseInt(pecas.foguetes.velocidade))
+
+    for (let i = 0; i < estatisticas.length; i++) {
+        estatisticas[i].innerText = totalValor[i].toString()
     }
-    console.log(totalForca)
+
 })

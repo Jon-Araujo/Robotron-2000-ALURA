@@ -232,3 +232,25 @@ main {
         margin: 10vh auto;
     }
 }
+
+/****************************** Cores *****/
+.rodape {
+    display: flex;
+    width: 100%
+}
+.cores {
+    display: flex;
+    height: 100% !important;
+    margin-right: 10rem; 
+    padding: 4%;
+    width: 80%
+}
+
+.botao-cor {
+    height: 100%;
+    width: 35%
+}
+
+.botao-cor:hover {
+    
+}

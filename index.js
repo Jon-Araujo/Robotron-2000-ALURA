@@ -72,27 +72,31 @@ botaoProducao.addEventListener('click', () => {
 
     const totalValor = [];
 
-    totalValor.push(valorEstatisticas[0] + parseInt(pecas.bracos.forca)
-        + parseInt(pecas.blindagem.forca) + parseInt(pecas.nucleos.forca)
-        + parseInt(pecas.pernas.forca) + parseInt(pecas.foguetes.forca))
+    totalValor.push(valorEstatisticas[0] + (parseInt(valorDisplay[0].value * pecas.bracos.forca))
+        + (parseInt(valorDisplay[1].value * pecas.blindagem.forca)) + (parseInt(valorDisplay[2].value * pecas.nucleos.forca))
+        + (parseInt(valorDisplay[3].value * pecas.pernas.forca)) + (parseInt(valorDisplay[4].value * pecas.foguetes.forca)))
 
 
-    totalValor.push(valorEstatisticas[1] + parseInt(pecas.bracos.poder)
-        + parseInt(pecas.blindagem.poder) + parseInt(pecas.nucleos.poder)
-        + parseInt(pecas.pernas.poder) + parseInt(pecas.foguetes.poder))
+    totalValor.push(valorEstatisticas[1] + (parseInt(valorDisplay[0].value * pecas.bracos.poder))
+        + (parseInt(valorDisplay[1].value * pecas.blindagem.poder)) + (parseInt(valorDisplay[2].value * pecas.nucleos.poder))
+        + (parseInt(valorDisplay[3].value * pecas.pernas.poder)) + (parseInt(valorDisplay[4].value * pecas.foguetes.poder)))
 
 
-    totalValor.push(valorEstatisticas[2] + parseInt(pecas.bracos.energia)
-        + parseInt(pecas.blindagem.energia) + parseInt(pecas.nucleos.energia)
-        + parseInt(pecas.pernas.energia) + parseInt(pecas.foguetes.energia))
+    totalValor.push(valorEstatisticas[2] + (parseInt(valorDisplay[0].value * pecas.bracos.energia))
+        + (parseInt(valorDisplay[1].value * pecas.blindagem.energia)) + (parseInt(valorDisplay[2].value * pecas.nucleos.energia))
+        + (parseInt(valorDisplay[3].value * pecas.pernas.energia)) + (parseInt(valorDisplay[4].value * pecas.foguetes.energia)))
 
 
-    totalValor.push(valorEstatisticas[3] + parseInt(pecas.bracos.velocidade)
-        + parseInt(pecas.blindagem.velocidade) + parseInt(pecas.nucleos.velocidade)
-        + parseInt(pecas.pernas.velocidade) + parseInt(pecas.foguetes.velocidade))
+    totalValor.push(valorEstatisticas[3] + (parseInt(valorDisplay[0].value * pecas.bracos.velocidade))
+        + (parseInt(valorDisplay[1].value * pecas.blindagem.velocidade)) + (parseInt(valorDisplay[2].value * pecas.nucleos.velocidade))
+        + (parseInt(valorDisplay[3].value * pecas.pernas.velocidade)) + (parseInt(valorDisplay[4].value * pecas.foguetes.velocidade)))
 
     for (let i = 0; i < estatisticas.length; i++) {
         estatisticas[i].innerText = totalValor[i].toString()
+    }
+
+    for (let i = 0; i < valorDisplay.length; i++) {
+        valorDisplay[i].value = "00";
     }
 
 })

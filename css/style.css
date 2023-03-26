@@ -48,14 +48,14 @@ main {
 .titulo {
     transform: rotate(180deg);
     font-weight: 500;
-    font-size: 130px;
+    font-size: 115px;
     position: absolute;
-    bottom: 7rem;
     left: -3rem;
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255,255,255,0.8);
+    height: 100%
 }
 
 .box {
@@ -142,6 +142,8 @@ main {
     background: var(--main-branco);
     clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
     cursor: pointer;
+    width: 180%;
+    margin-top: 3rem;
 }
 
 .producao:hover {
@@ -234,23 +236,22 @@ main {
 }
 
 /****************************** Cores *****/
-.rodape {
-    display: flex;
-    width: 100%
-}
 .cores {
     display: flex;
-    height: 100% !important;
-    margin-right: 10rem; 
-    padding: 4%;
-    width: 80%
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    width: 15rem;
 }
 
-.botao-cor {
-    height: 100%;
-    width: 35%
+.seleciona-cor {
+    height: 30%;
+    width: 48%;
 }
 
-.botao-cor:hover {
-    
+.seleciona-cor:hover {
+    transform: scale(1.2);
+    transition: 1s;
 }

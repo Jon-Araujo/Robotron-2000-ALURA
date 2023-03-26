@@ -99,4 +99,17 @@ botaoProducao.addEventListener('click', () => {
         valorDisplay[i].value = "00";
     }
 
-})
+});
+
+//Mudar cor do robô:
+
+const roboPrincipal = document.querySelector(".robotron");
+const roboCores = document.querySelectorAll(".seleciona-cor");
+const listaSrc = ["Branco", "Amarelo", "Azul", "Rosa", "Vermelho", "Preto"];
+
+for (let i = 0; i < roboCores.length; i++) {
+    roboCores[i].addEventListener("click", () => {
+        roboPrincipal.innerHTML =
+            `<img class="robo" src="./imagens-do-robotron/Robotron 2000 - ${listaSrc[i]}/Robotron 2000 - ${listaSrc[i]}.png" alt="Robotron"></img><figcaption class="titulo">ROBOTRON 2000</figcaption>`
+    });
+}
